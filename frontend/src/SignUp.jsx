@@ -12,17 +12,17 @@ const SignUp=()=>{
                 
                <div className='w-[90%]'>
                     <p className='text-md text-gray-700 font-semibold'>Email</p>
-                     <input type="text" placeholder="Enter your Email" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
+                     <input type="email" placeholder="Enter your Email" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
                 </div>
                 
                <div className='w-[90%]'>
                     <p className='text-md text-gray-700 font-semibold'>password</p>
-                     <input type="text" placeholder="Enter your Password" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
+                     <input type="password" placeholder="Enter your Password" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
                 </div>
                 
                <div className='w-[90%]'>
                     <p className='text-md text-gray-700 font-semibold'>Confirm Password</p>
-                     <input type="text" placeholder="Confirm your Password" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
+                     <input type="password" placeholder="Confirm your Password" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1'  />
                 </div>
                 <div className='flex gap-2 border-1 border-gray-700 w-[90%] justify-content-center py-4 px-1'>
                     <input type="checkbox" name="" id="" className='m-0.5 h-5 w-5 items-center'/>
