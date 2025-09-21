@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import { House } from 'lucide-react';
 const NavBar=()=>{
     return(
-        <div className="flex justify-around h-16 items-center border-3 w-full">
+        <div className="flex justify-around h-16 items-center border-2 w-full  ">
             <h1 className="font-extrabold">BlogVerse</h1>
             <div className='relative items-center justify-center '>
             <Link to="/HomePage" className=' text-gray-700 hover:bg-gray-300 px-7 py-2 rounded-lg font-semibold cursor-pointer justify-around'>Home</Link>

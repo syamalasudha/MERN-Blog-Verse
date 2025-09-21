@@ -74,13 +74,14 @@ const HomePage=()=>{
         <div className="min-h-screen flex flex-col items-center pt-5 bg-gray-50">
             <NavBar/>
             
-            <p className="text-4xl font-bold mt-10">Welcome to BlogVerse</p>
-            <p className="text-lg text-gray-500 mt-4"> Discover amazing stories, insights, and ideas from our community of <br /> Writers.<span className="text-blue-600 hover:underline cursor-pointer">Sign In</span> to create your own posts and Save your Favourites.</p>
-            <div className=" flex gap-10 justify-around mt-5 ">
-                <button className="px-10 py-4 cursor-pointer bg-blue-700 hover:bg-blue-900 shadow-md text-white rounded-md">Write a New Post</button>
-                <button className="px-10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md" >View My Posts</button>
+            <p className="text-4xl font-bold mt-10 ">Welcome to BlogVerse</p>
+            <p className="text-sm text-gray-500 mt-4 text-center md:text-lg "> Discover amazing stories, insights, and ideas from our community <br/>of Writers.<span className="text-blue-600 hover:underline cursor-pointer">Sign In</span> to create your own posts and Save your Favourites.</p>
+            <div className=" flex  gap-10 justify-around mt-5  ">
+                <button className="px-3 md:10 py-4 cursor-pointer bg-blue-700 hover:bg-blue-900 shadow-md text-white rounded-md">Write a New Post</button>
+                <button className="px-3 md:10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md" >View My Posts</button>
             </div>
-            <div className="mt-5 flex gap-10 flex-wrap justify-center w-full rounded-lg shadow-lg pb-5">
+            
+            <div className="grid md:grid-cols-3 mt-5 gap-10 justify-center items-center w-full rounded-lg shadow-lg pb-5">
                 {
                     post.map((post) => (
                         <div className="w-96 bg-white shadow-lg rounded-lg" key={post.id}>
@@ -108,6 +109,7 @@ const HomePage=()=>{
                         </div>))
 }
                         </div>
+                        
         </div>
     )
 }

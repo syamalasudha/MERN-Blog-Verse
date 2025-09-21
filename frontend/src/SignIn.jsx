@@ -17,8 +17,8 @@ const SignIn = () => {
     return (
         <div>
            <NavBar/>
-        <div className=" flex flex-col items-center justify-center min-h-screen w-full" >
-            <div className="flex flex-col  justify-center mt-8 gap-5 border-1 border-black py-7 w-1/3 rounded-2xl">
+        <div className=" flex flex-col items-center justify-center min-h-screen " >
+            <div className="flex flex-col  justify-center m-3 gap-5 border-1 border-black py-7 w-[90%]  rounded-2xl md:w-1/3">
                 <div className="gap-4 text-center">
                     <h1 className="font-bold text-xl text-black ">Sign In</h1>
                     <p className="text-gray-70">Access Your account</p>
