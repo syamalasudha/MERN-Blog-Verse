@@ -81,7 +81,7 @@ const HomePage=()=>{
                 <button className="px-3 md:10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md" >View My Posts</button>
             </div>
             
-            <div className="grid md:grid-cols-3 mt-5 gap-10 justify-center items-center w-full rounded-lg shadow-lg pb-5">
+            <div className="grid md:grid-cols-3 mt-5  gap-30 justify-center items-center rounded-lg shadow-lg ">
                 {
                     post.map((post) => (
                         <div className="w-96 bg-white shadow-lg rounded-lg" key={post.id}>
