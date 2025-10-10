@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import { Eye } from 'lucide-react';
 import { EyeOff } from 'lucide-react';
 import { Lock } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import {useState} from 'react';
 
 
@@ -25,9 +26,10 @@ const SignIn = () => {
                     <p className="text-gray-70">Access Your account</p>
                 </div>
                 <form className="flex flex-col py-7 items-center gap-5   " action="">
-                    <div className="w-[90%]">
+                    <div className="w-[90%] relative">
                         <p className="text-md font-semibold text-gray-700">Email Address</p>
-                        <input type="text"  placeholder="sample@gmail.com" className="border-1 border-gray-700 py-3 rounded-xl focus-outline:none focus:border-white pl-1 w-full " />
+                        <input type="text"  placeholder="sample@gmail.com" className="border-1 border-gray-700 py-3 rounded-xl focus-outline:none focus:border-white pl-9 w-full " />
+                         <Mail className='absolute left-2 top-10 text-gray-700 size-5 ' />
                     </div>
                     <div className="w-[90%] relative">
                         <p className="text-md font-semibold text-gray-700">Password</p>
