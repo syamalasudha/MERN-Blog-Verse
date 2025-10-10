@@ -134,20 +134,20 @@ const SignUp = () => {
                         <Lock className='absolute left-2 top-10 text-gray-700 size-5 ' />
                         <p onClick={handlePassword}>{showPassword ? <Eye className='absolute right-2 top-9 size-6' /> : <EyeOff className='absolute right-2 top-9 size-6' />} </p>
 
-
+                        {errors.password && <p className='text-red-600'>{errors.password}</p>}
 
                     </div>
 
-                    {errors.password && <p className='text-red-600'>{errors.password}</p>}
+                    
                     <div className='w-[90%] relative'>
                         <p className='text-md text-gray-700 font-semibold px-1'>Confirm Password</p>
                         <input value={formData.confirmPassword} type={showConfirmPassword ? "password" : "text"} onChange={handleChange} name="confirmPassword" placeholder="Confirm your Password" className='border-1 border-gray-700 w-full py-3 pl-9 rounded-xl focus:outline-none focus:border-purple-500 ' />
                         <LockKeyhole className='absolute left-2 top-10 text-gray-700 size-5' />
                         <p onClick={handleConfirmPassword}>{showConfirmPassword ? <Eye className='absolute right-2 top-9' /> : <EyeOff className='absolute right-2 top-9' />}  </p>
-
+                          {errors.confirmPassword && <p className='text-red-600'>{errors.confirmPassword}</p>}
 
                     </div>
-                    {errors.confirmPassword && <p className='text-red-600'>{errors.confirmPassword}</p>}
+                    
                     <div className='flex gap-2 border-1 border-gray-700 w-[90%] justify-content-center py-4 px-1'>
                         <input type="checkbox" name="" id="" className='m-0.5 h-5 w-5 items-center ' />
                         I agree to the Terms of Service and Privacy policy
