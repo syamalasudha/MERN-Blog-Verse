@@ -149,7 +149,7 @@ const SignUp = () => {
                     </div>
                     
                     <div className='flex gap-2 border-1 border-gray-700 w-[90%] justify-content-center py-4 px-1'>
-                        <input type="checkbox" name="" id="" className='m-0.5 h-5 w-5 items-center ' />
+                        <input type="checkbox" name="" id="" className='m-0.5 h-5 w-5 items-center ' required />
                         I agree to the Terms of Service and Privacy policy
                     </div>
 
