@@ -6,6 +6,7 @@ import { LockKeyhole } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Eye } from 'lucide-react';
 import { EyeOff } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { useState } from 'react';
 
 const SignUp = () => {
@@ -113,9 +114,10 @@ const SignUp = () => {
                     {errors.fullName && <p className='text-red-600'>{errors.fullName}</p>}
                 </div>
 
-                <div className='w-[90%]'>
+                <div className='w-[90%] relative'>
                     <p className='text-md text-gray-700 font-semibold px-1'>Email</p>
-                    <input value={formData.email} type="email" onChange={handleChange} name="email" placeholder="Enter your Email" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1' />
+                    <input value={formData.email} type="email" onChange={handleChange} name="email" placeholder="Enter your Email" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-9' />
+                    <Mail className='absolute left-2 top-10 text-gray-700 size-5 ' />
                     {errors.email && <p className='text-red-600'>{errors.email}</p>}
                 </div>
 
