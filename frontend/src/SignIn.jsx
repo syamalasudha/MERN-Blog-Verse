@@ -31,7 +31,7 @@ const SignIn = () => {
                     </div>
                     <div className="w-[90%] relative">
                         <p className="text-md font-semibold text-gray-700">Password</p>
-                        <input type={showPassword?"password":"text"} placeholder="sample123" className="border-1 border-gray-700 py-3 rounded-xl focus-outline:none focus:border-white pl-1 w-full " />
+                        <input type={showPassword?"password":"text"} placeholder="  sample123" className="border-1 border-gray-700 py-3 rounded-xl focus-outline:none focus:border-white pl-1 w-full " />
                         <Lock className='absolute left-2 top-10 text-gray-700 size-5 ' />
                     <p onClick={handlePassword}>{showPassword? <Eye className='absolute right-2 top-9 size-6'/>:<EyeOff className='absolute right-2 top-9 size-6'/>} </p> 
                     </div>
