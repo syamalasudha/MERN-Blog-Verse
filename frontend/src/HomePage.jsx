@@ -71,7 +71,7 @@ const HomePage=()=>{
 
     ]
     return(
-        <div className="min-h-screen flex flex-col items-center pt-5 bg-gray-50">
+        <div className="min-h-screen flex flex-col items-center  bg-gray-50">
             <NavBar/>
             
             <p className="text-4xl font-bold mt-10 ">Welcome to BlogVerse</p>
@@ -81,7 +81,7 @@ const HomePage=()=>{
                 <button className="px-3 md:10 py-4 cursor-pointer bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-md" >View My Posts</button>
             </div>
             
-            <div className="grid md:grid-cols-3 mt-5  gap-30 justify-center items-center rounded-lg shadow-lg ">
+            <div className="mt-5 flex gap-10 flex-wrap justify-center w-full rounded-lg shadow-lg pb-5">
                 {
                     post.map((post) => (
                         <div className="w-96 bg-white shadow-lg rounded-lg" key={post.id}>
@@ -112,5 +112,6 @@ const HomePage=()=>{
                         
         </div>
     )
+
 }
 export default HomePage;

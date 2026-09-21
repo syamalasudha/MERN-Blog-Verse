@@ -110,19 +110,19 @@ const SignUp = () => {
     return (
         <div className='flex items-center justify-around flex-col  gap-5 w-full pb-3 md:w-full  '>
             <NavBar />
-            <div className='min-h-screen justify-center md:w-1/3'>
-                <h1 className='text-2xl text-blue-600 font-bold text-center'>Join Blog Verse</h1>
+            <div className='w-[90%] md:w-1/3  flex  flex-col items-center mt-5 gap-2 border-1 border-gray-300  rounded-2xl shadow-2xl'>
+                <h1 className='text-2xl text-black-600 font-bold text-center mt-5'>Join Blog Verse</h1>
                 <p className='text-xl text-gray-600 text-center '>Create your Account and <br />Start your Blogging Journey today</p>
-                <form onSubmit={handleSubmit} className="flex flex-col border-1 border-black py-7 mt-2 items-center gap-5 sm:w-[90%] md:w-full " action="">
+                <form onSubmit={handleSubmit} className="flex flex-col  py-7 mt-2 items-center gap-5 sm:w-[90%] md:w-full " action="">
                     <div className='w-[90%]'>
                         <p className='text-md text-gray-700 font-semibold px-1'>Full Name</p>
-                        <input value={formData.fullName} type="text" onChange={handleChange} name="fullName" placeholder="Enter your Full Name" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-1' />
+                        <input value={formData.fullName} type="text" onChange={handleChange} name="fullName" placeholder="Enter your Full Name" className='border-1 border-gray-300 bg-gray-50 w-full  rounded-md py-3 px-6 focus:outline-none focus:border-black focus:border-1.8 text-sm duration-200' />
                         {errors.fullName && <p className='text-red-600'>{errors.fullName}</p>}
                     </div>
 
                     <div className='w-[90%] relative'>
                         <p className='text-md text-gray-700 font-semibold px-1'>Email</p>
-                        <input value={formData.email} type="email" onChange={handleChange} name="email" placeholder="Enter your Email" className='border-1 border-gray-700 w-full py-3 rounded-xl focus:outline-none focus:border-purple-500 pl-9' />
+                        <input value={formData.email} type="email" onChange={handleChange} name="email" placeholder="Enter your Email" className='border-1 border-gray-300 bg-gray-50 w-full  rounded-md py-3 px-12 focus:outline-none focus:border-black focus:border-1.8 text-sm duration-200' />
                         <Mail className='absolute left-2 top-10 text-gray-700 size-5 ' />
                         {errors.email && <p className='text-red-600'>{errors.email}</p>}
                     </div>
@@ -130,7 +130,7 @@ const SignUp = () => {
                     <div className='w-[90%] relative'>
                         <p className='text-md text-gray-600 font-semibold px-1'>password</p>
 
-                        <input value={formData.password} type={showPassword ? "password" : "text"} onChange={handleChange} placeholder="Enter your Password" name="password" className='border-1 border-gray-700 w-full py-3 rounded-xl px-7 pl-9 focus:outline-none focus:border-purple-500 ' />
+                        <input value={formData.password} type={showPassword ? "password" : "text"} onChange={handleChange} placeholder="Enter your Password" name="password" className='border-1 border-gray-300 bg-gray-50 w-full  rounded-md py-3 px-12 focus:outline-none focus:border-black focus:border-1.8 text-sm duration-200' />
                         <Lock className='absolute left-2 top-10 text-gray-700 size-5 ' />
                         <p onClick={handlePassword}>{showPassword ? <Eye className='absolute right-2 top-9 size-6' /> : <EyeOff className='absolute right-2 top-9 size-6' />} </p>
 
@@ -141,23 +141,23 @@ const SignUp = () => {
                     
                     <div className='w-[90%] relative'>
                         <p className='text-md text-gray-700 font-semibold px-1'>Confirm Password</p>
-                        <input value={formData.confirmPassword} type={showConfirmPassword ? "password" : "text"} onChange={handleChange} name="confirmPassword" placeholder="Confirm your Password" className='border-1 border-gray-700 w-full py-3 pl-9 rounded-xl focus:outline-none focus:border-purple-500 ' />
+                        <input value={formData.confirmPassword} type={showConfirmPassword ? "password" : "text"} onChange={handleChange} name="confirmPassword" placeholder="Confirm your Password" className='border-1 border-gray-300 bg-gray-50 w-full  rounded-md py-3 px-12 focus:outline-none focus:border-black focus:border-1.8 text-sm duration-200' />
                         <LockKeyhole className='absolute left-2 top-10 text-gray-700 size-5' />
                         <p onClick={handleConfirmPassword}>{showConfirmPassword ? <Eye className='absolute right-2 top-9' /> : <EyeOff className='absolute right-2 top-9' />}  </p>
                           {errors.confirmPassword && <p className='text-red-600'>{errors.confirmPassword}</p>}
 
                     </div>
                     
-                    <div className='flex gap-2 border-1 border-gray-700 w-[90%] justify-content-center py-4 px-1'>
-                        <input type="checkbox" name="" id="" className='m-0.5 h-5 w-5 items-center ' required />
+                    <div className='flex gap-2  justify-content-center py-4 px-1 border-1 border-gray-300 bg-gray-50 w-[90%] rounded-md  '>
+                        <input type="checkbox" name="" id="" className='text-sm text-gray-800 font-semibold ml-2' required />
                         I agree to the Terms of Service and Privacy policy
                     </div>
 
 
                     {success && <p className='text-green-600'>{success}</p>}
-                    <button type="submit" className='w-[90%] bg-purple-500  py-4 text-white rounded xl font-semibold cursor-pointer flex justify-center gap-1'><CircleUser /><p> {isLoading?"Creating...":"Create Account"}</p>  </button>
+                    <button type="submit" className=' w-[90%] mt-4 py-2 bg-blue-600   text-white rounded xl font-semibold cursor-pointer flex justify-center gap-1'><CircleUser /><p> {isLoading?"Creating...":"Create Account"}</p>  </button>
                     <div className='border-[0.5px] border-gray-500 w-[90%]'></div>
-                    <p>Already have an Account?<Link to="/SignIn" className='text-purple-500 cursor-pointer'> SignIn Here</Link></p>
+                    <p>Already have an Account?<Link to="/SignIn" className='text-blue-500 cursor-pointer'> SignIn Here</Link></p>
                     <Link to="/" className='text-gray-500 font-semibold hover:bg-gray-200 w-[90%] rounded-xl cursor-pointer text-center  py-4'>Back to Home</Link>
                 </form>
             </div>
